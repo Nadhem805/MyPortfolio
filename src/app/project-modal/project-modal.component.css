@@ -1,0 +1,132 @@
+/* Modal Styling */
+.modal-header {
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-bottom: none;
+    padding: 1.2rem 1.5rem;
+    border-radius: 0;
+}
+
+.modal-title {
+    font-weight: 600;
+    margin: 0;
+}
+
+.btn-close {
+    filter: invert(1);
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+}
+
+.btn-close:hover {
+    opacity: 1;
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+/* Carousel Styling */
+carousel {
+    display: block;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Modal Text Styling */
+.modal-body h3 {
+    color: #2c3e50;
+    margin: 1.5rem 0 1rem 0;
+    font-weight: 600;
+}
+
+.modal-body p {
+    color: #34495e;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.modal-body a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.modal-body a:hover {
+    color: #764ba2;
+    text-decoration: underline;
+}
+
+.modal-body hr {
+    margin: 1.5rem 0;
+    border-color: rgba(102, 126, 234, 0.2);
+}
+
+/* Tag Styling for Modal */
+.modal-body .tag {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+}
+
+.modal-body .tag:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Animation for modal appearance */
+.modal-content {
+    animation: modalFadeIn 0.3s ease-out;
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Custom scrollbar for modal */
+.modal-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+    background: #667eea;
+    border-radius: 4px;
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+    background: #5a6fd8;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .modal-header,
+    .modal-body {
+        padding: 1rem;
+    }
+    
+    .modal-body .tag {
+        font-size: 0.75rem;
+        padding: 0.2rem 0.6rem;
+    }
+}

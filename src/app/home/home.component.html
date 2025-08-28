@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <!--About me-->
+        <div class="col-lg shadow border m-1">
+        <div class="text-center">
+            <h2>About Me</h2>
+        <img src="assets/images/n.png" class="img-fluid rounded-circle" alt="Profile Picture" width="177x" height="177px">
+          <p class="intro">I am a Bachelor’s degree graduate in Information Technology with strong knowledge in Artificial Intelligence and modern development technologies. I have gained hands-on experience through internships and projects, including the development of an AI-based recruitment application using Spring Boot, Angular, MongoDB, and Python (Scikit-learn).I consider myself motivated, adaptable, and eager to join a dynamic team where I can contribute my skills in software development, AI, and data analysis, while continuing to grow and take on new challenges.</p>  
+        </div>
+        </div>
+        <!--Feature Prject-->
+        <div class="col-lg shadow border m-1">
+            <div class="text-center">
+                <h2>Featured Project</h2>
+                <h4>{{featuredProjects.name}}</h4>
+            </div>
+
+            <carousel>
+                <div *ngFor="let picture of featuredProjects.pictures">
+                <slide><img [src]="picture" alt="slide" style="display: block; width: 100%;"></slide>
+                </div>
+            </carousel>
+            <p class="mt-2">{{featuredProjects.summary}}</p>
+            <p>Visit the Portfolio section to learn more!</p>
+        </div>        
+    </div>
+</div>

@@ -1,0 +1,162 @@
+/* Portfolio container */
+.container {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Filter button styling */
+.btn-outline-primary {
+    border: 2px solid #667eea;
+    color: #667eea;
+    font-weight: 500;
+    border-radius: 25px;
+    padding: 0.5rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background-color: #667eea;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
+}
+
+.btn-outline-secondary {
+    border: 2px solid #6c757d;
+    color: #6c757d;
+    font-weight: 500;
+    border-radius: 25px;
+    padding: 0.5rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #6c757d;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(108, 117, 125, 0.3);
+}
+
+/* Filter panel styling */
+.border {
+    border: 1px solid rgba(102, 126, 234, 0.2) !important;
+    border-radius: 12px !important;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+}
+
+.shadow-sm {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Form styling */
+small b {
+    color: #2c3e50;
+    font-size: 0.9rem;
+}
+
+.form-group {
+    margin-top: 0.5rem;
+}
+
+.form-check {
+    margin-bottom: 0.5rem;
+    padding-left: 0;
+}
+
+.form-check-input {
+    width: 18px;
+    height: 18px;
+    margin-top: 0.2rem;
+    cursor: pointer;
+}
+
+.form-check-input:checked {
+    background-color: #667eea;
+    border-color: #667eea;
+}
+
+.form-check-label {
+    margin-left: 0.5rem;
+    color: #34495e;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.form-check:hover .form-check-label {
+    color: #667eea;
+}
+
+/* Row and column adjustments */
+.row.mx-0 {
+    margin: 0;
+}
+
+.col {
+    padding: 0 0.5rem;
+}
+
+/* Project grid styling */
+.row {
+    margin: 0 -10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.col-lg-4.col-md-6.nb-4 {
+    padding: 10px;
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Collapse animation */
+[collapse] {
+    transition: all 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .btn-outline-primary, 
+    .btn-outline-secondary {
+        padding: 0.4rem 1.2rem;
+        font-size: 0.9rem;
+    }
+    
+    .border {
+        width: 100% !important;
+        max-width: 100%;
+    }
+    
+    .col-lg-4.col-md-6.nb-4 {
+        min-width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .row.mx-0 {
+        flex-direction: column;
+    }
+    
+    .col {
+        margin-bottom: 1rem;
+    }
+}

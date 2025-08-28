@@ -1,0 +1,162 @@
+/* Animated gradient background */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Container styling */
+.container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* Card styling */
+.shadow {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.85) !important;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.shadow:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2) !important;
+}
+
+.border {
+    border: none !important;
+}
+
+/* Text styling */
+h2 {
+    color: #2c3e50;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #e73c7e, #23a6d5);
+    border-radius: 3px;
+}
+
+h4 {
+    color: #3498db;
+    font-weight: 600;
+    margin: 1rem 0;
+}
+
+.intro {
+    line-height: 1.8;
+    color: #34495e;
+    font-size: 1.05rem;
+    text-align: justify;
+    padding: 0 1.5rem;
+}
+
+/* Image styling */
+.img-fluid.rounded-circle {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    margin: 1.5rem 0;
+    transition: all 0.4s ease;
+}
+
+.img-fluid.rounded-circle:hover {
+    transform: scale(1.05);
+}
+
+/* Carousel placeholder styling */
+carousel {
+    display: block;
+    height: 250px;
+    background: linear-gradient(45deg, #f1f2f6, #e2e6ee);
+    border-radius: 10px;
+    margin: 1rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+carousel:before {
+    content: 'Carousel Placeholder';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #7f8c8d;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* Button styling */
+.btn-portfolio {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.6rem 1.8rem;
+    background: linear-gradient(90deg, #e73c7e, #23a6d5);
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.btn-portfolio:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .col-lg {
+        margin-bottom: 2rem;
+    }
+    
+    .intro {
+        padding: 0 1rem;
+    }
+}
+
+/* Add subtle animation to text elements */
+.text-center {
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

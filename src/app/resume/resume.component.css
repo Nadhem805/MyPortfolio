@@ -1,0 +1,163 @@
+/* Container styling */
+.container.text-center {
+    padding: 2rem 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Download button styling */
+.btn-primary {
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    border: none !important;
+    border-radius: 30px;
+    padding: 0.8rem 2rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3) !important;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4) !important;
+    background: linear-gradient(90deg, #5a6fd8 0%, #6a4190 100%);
+}
+
+/* Accordion general styling */
+accordion {
+    display: block;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+accordion-group {
+    display: block;
+    border-bottom: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+accordion-group:last-child {
+    border-bottom: none;
+}
+
+/* Accordion header styling */
+accordion-group .accordion-header {
+    background: linear-gradient(90deg, #f8f9ff 0%, #f0f2f7 100%);
+    padding: 1.2rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+accordion-group .accordion-header:hover {
+    background: linear-gradient(90deg, #e8edff 0%, #e6e9f0 100%);
+}
+
+accordion-group .accordion-header h4 {
+    margin: 0;
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+/* Accordion content styling */
+accordion-group .accordion-body {
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border-left: 4px solid #667eea;
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* List styling */
+.list-unstyled {
+    padding-left: 0.5rem;
+}
+
+.list-unstyled li {
+    margin-bottom: 1.2rem;
+    padding-left: 1rem;
+    border-left: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.list-unstyled li:hover {
+    border-left-color: #667eea;
+    padding-left: 1.2rem;
+}
+
+.list-unstyled strong {
+    color: #2c3e50;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.3rem;
+    font-size: 1.1rem;
+}
+
+.list-unstyled em {
+    color: #667eea;
+    font-style: italic;
+    font-weight: 500;
+}
+
+/* Horizontal rule styling */
+hr {
+    margin: 1.2rem 0;
+    border: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, rgba(102, 126, 234, 0.3) 50%, transparent 100%);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container.text-center {
+        padding: 1.5rem 0.5rem;
+    }
+    
+    .btn-primary {
+        padding: 0.7rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    accordion-group .accordion-header {
+        padding: 1rem 1.2rem;
+    }
+    
+    accordion-group .accordion-header h4 {
+        font-size: 1.1rem;
+    }
+    
+    accordion-group .accordion-body {
+        padding: 1.2rem;
+    }
+    
+    .list-unstyled li {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Animation for accordion expansion */
+.accordion-content {
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+/* Icon styling (if your accordion uses icons) */
+.accordion-icon {
+    transition: transform 0.3s ease;
+    color: #667eea;
+}
+
+.accordion-expanded .accordion-icon {
+    transform: rotate(180deg);
+}
